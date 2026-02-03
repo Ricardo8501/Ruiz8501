@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ricardo Ruiz | Ruiz8501</title>
+
+  <style>
+    :root{
+      --bg:#0b0f17;
+      --card:#121a2a;
+      --text:#e7ecf5;
+      --muted:#aab6cf;
+      --accent:#5eead4;
+      --border:rgba(255,255,255,.10);
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background: radial-gradient(1200px 600px at 20% 0%, rgba(94,234,212,.12), transparent 60%),
+                  radial-gradient(900px 500px at 80% 10%, rgba(99,102,241,.12), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.5;
+    }
+    a{ color:var(--accent); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+
+    .container{ max-width:980px; margin:0 auto; padding:28px 18px 44px; }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:10;
+      backdrop-filter: blur(10px);
+      background: rgba(11,15,23,.70);
+      border-bottom:1px solid var(--border);
+    }
+    .nav{
+      max-width:980px;
+      margin:0 auto;
+      padding:14px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+    }
+    .brand{
+      font-weight:800;
+      letter-spacing:.4px;
+      color:var(--text);
+    }
+    .links{ display:flex; gap:14px; flex-wrap:wrap; }
+    .links a{
+      color:var(--muted);
+      padding:8px 10px;
+      border-radius:10px;
+    }
+    .links a:hover{
+      color:var(--text);
+      background: rgba(255,255,255,.06);
+      text-decoration:none;
+    }
+
+    .hero{ padding:26px 0 10px; }
+    .kicker{ margin:0 0 10px; color:var(--muted); }
+    h1{ margin:0 0 10px; font-size:44px; line-height:1.05; }
+    .subtitle{ margin:0 0 18px; color:var(--muted); font-size:18px; max-width:60ch; }
+
+    .hero-photo{
+      width:100%;
+      max-width:980px;
+      height:auto;
+      border-radius:18px;
+      border:1px solid var(--border);
+      box-shadow: 0 10px 28px rgba(0,0,0,.30);
+      display:block;
+      margin:18px 0 10px;
+    }
+    .caption{ color:var(--muted); font-size:13px; margin:6px 0 0; }
+
+    .cta-row{ display:flex; gap:12px; flex-wrap:wrap; margin:16px 0 6px; }
+    .btn{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:14px;
+      background: var(--accent);
+      color:#061018;
+      font-weight:700;
+    }
+    .btn.ghost{
+      background: transparent;
+      color: var(--text);
+      border:1px solid var(--border);
+    }
+
+    .grid{
+      margin-top:22px;
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap:14px;
+    }
+    .card{
+      background: rgba(18,26,42,.85);
+      border: 1px solid var(--border);
+      border-radius:18px;
+      padding:16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,.25);
+    }
+    .card h2{ margin:0 0 10px; font-size:18px; }
+    .card p{ margin:0 0 10px; color:var(--muted); }
+    .card ul{ margin:0; padding-left:18px; color:var(--muted); }
+    .pill{
+      display:inline-block;
+      margin:4px 6px 0 0;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      color:var(--muted);
+      font-size:13px;
+      background: rgba(255,255,255,.03);
+    }
+
+    footer{
+      margin-top:26px;
+      color:var(--muted);
+      border-top:1px solid var(--border);
+      padding-top:16px;
+      font-size:14px;
+    }
+
+    @media (max-width:520px){
+      h1{ font-size:34px; }
+      .subtitle{ font-size:16px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="nav">
+      <a class="brand" href="#top">Ruiz8501</a>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top" class="container">
+    <section class="hero">
+      <p class="kicker">Hi, I’m</p>
+      <h1>Ricardo Ruiz</h1>
+      <p class="subtitle">
+        Accounting student building a portfolio in analytics, audit, and systems.
+        This site is hosted with GitHub Pages.
+      </p>
+
+      <div class="cta-row">
+        <a class="btn" href="#projects">See Projects</a>
+        <a class="btn ghost" href="#contact">Contact</a>
+      </div>
+
+      <!-- Your uploaded photo -->
+      <img class="hero-photo" src="photos/IMG_5741.jpeg" alt="Two dogs riding in a car" />
+      <p class="caption">A photo I uploaded to my GitHub repo (photos/IMG_5741.jpeg).</p>
+    </section>
+
+    <section id="about" class="grid">
+      <article class="card">
+        <h2>About Me</h2>
+        <p>
+          Replace this with 2–4 sentences about you. Example: I’m an accounting major interested in
+          public accounting and data analytics. I enjoy building practical projects using Excel and
+          databases.
+        </p>
+        <div>
+          <span class="pill">Accounting</span>
+          <span class="pill">Excel</span>
+          <span class="pill">Data</span>
+          <span class="pill">Audit</span>
+        </div>
+      </article>
+
+      <article class="card" id="projects">
+        <h2>Projects</h2>
+        <ul>
+          <li><strong>Project 1:</strong> (Add your project + result)</li>
+          <li><strong>Project 2:</strong> (Add your project + result)</li>
+          <li><strong>Project 3:</strong> (Add your project + result)</li>
+        </ul>
+        <p style="margin-top:12px;">
+          Tip: You can add a <code>projects.html</code> page later if you want.
+        </p>
+      </article>
+
+      <article class="card" id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:you@example.com">you@example.com</a> (change this)</p>
+        <p>GitHub: <a href="https://github.com/Ruiz8501">github.com/Ruiz8501</a></p>
+        <p>LinkedIn: <a href="#">add-your-link</a></p>
+      </article>
+    </section>
+
+    <footer>
+      <p>© <span id="year"></span> Ricardo Ruiz • Built on GitHub Pages</p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
